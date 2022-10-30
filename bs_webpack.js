@@ -100,9 +100,4 @@ const graph = createGraph("./src/index.js")
 
 const result = bundle(graph)
 
-fs.writeFile('./bundle.js', result, (err) => {
-  if (err) {
-    console.error(err)
-    return
-  }
-})
+fs.writeFileSync('./bundle.js', result)
